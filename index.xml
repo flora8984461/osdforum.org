@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open Source Developer Forum on </title>
-    <link>https://openhwgroup.github.io/osdforum.org/</link>
+    <link>https://www.osdforum.org/</link>
     <description>Recent content in Open Source Developer Forum on </description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>info@openhwgroup.org (OpenHW Group)</managingEditor>
     <webMaster>info@openhwgroup.org (OpenHW Group)</webMaster>
     <lastBuildDate>Thu, 14 Mar 2019 15:50:25 -0400</lastBuildDate>
     
-	<atom:link href="https://openhwgroup.github.io/osdforum.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.osdforum.org/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
