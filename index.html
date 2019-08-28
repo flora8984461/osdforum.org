@@ -41,6 +41,11 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
   
+<script>
+	
+		var tableClasses = "table";
+	
+</script>
   
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900&display=swap" rel="stylesheet">
@@ -67,40 +72,42 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row" id="header-row">
-    <div class="col-sm-5 col-md-4" id="header-left">
-      <div class="wrapper-logo-default">
-          <a title="OSDForum" href="https://www.osdforum.org/">
-            <img width="140" class="logo-eclipse-default img-responsive hidden-xs" src="https://www.osdforum.org/images/logo.png" alt="OSDForum" />
-          </a>
-        
-      </div>
-    </div>
-    
-    <div class="col-sm-19 col-md-20 reset margin-top-10" id="main-menu-wrapper">
-    
-      <div class="navbar yamm" id="main-menu">
-        <div class="navbar-collapse collapse reset float-right" id="navbar-main-menu">
-          <ul class="nav navbar-nav">
-            
-
-
-
-
-
-
-
-          </ul>
-        </div>
-        <div class="navbar-header">
+<div class="background-white">
+  <div class="container">
+    <div class="row" id="header-row">
+      <div class="col-sm-5 col-md-4" id="header-left">
+        <div class="wrapper-logo-default">
+            <a title="OSDForum" href="https://www.osdforum.org/">
+              <img width="140" class="logo-eclipse-default img-responsive hidden-xs" src="https://www.osdforum.org/images/logo.png" alt="OSDForum" />
+            </a>
           
-          <div class="wrapper-logo-mobile">
+        </div>
+      </div>
+      
+      <div class="col-sm-19 col-md-20 reset margin-top-10" id="main-menu-wrapper">
+      
+        <div class="navbar yamm" id="main-menu">
+          <div class="navbar-collapse collapse reset float-right" id="navbar-main-menu">
+            <ul class="nav navbar-nav">
+              
+
+
+
+
+
+
+
+            </ul>
+          </div>
+          <div class="navbar-header">
             
-              <a class="navbar-brand visible-xs" title="OSDForum" href="https://www.osdforum.org/">
-                <img width="140" class="logo-eclipse-default-mobile img-responsive" src="https://www.osdforum.org/images/logo.png" alt="OSDForum" />
-              </a>
-            
+            <div class="wrapper-logo-mobile">
+              
+                <a class="navbar-brand visible-xs" title="OSDForum" href="https://www.osdforum.org/">
+                  <img width="140" class="logo-eclipse-default-mobile img-responsive" src="https://www.osdforum.org/images/logo.png" alt="OSDForum" />
+                </a>
+              
+            </div>
           </div>
         </div>
       </div>
@@ -111,10 +118,12 @@
 		<div class="jumbotron featured-jumbotron margin-bottom-0 padding-top-40">
 		  <div class="container">
 		    <div class="row">
-		      <div class="col-xs-24 padding-top-40">
+		      <div class="col-xs-24">
 		        <h1 class="sr-only">OSDForum</h1>
 		        <img class="img img-responsive margin-auto" alt="OSDForum Logo in white" src="/images/osdforum_white.png" />
-		        <h2>Wednesday Sep 18th, 2019 | <a href="https://bayviewyards.org/">Innovation Centre at Bayview Yards</a>, Ottawa, Ontario</h2>
+		        <p class="headline">Wednesday Sep 18th, 2019</p>
+		        <p><a href="https://bayviewyards.org/">Innovation Centre at Bayview Yards</a></p>
+		        <p>Ottawa, Ontario</p>
 		      </div>
 		    </div>
 		  </div>
@@ -133,7 +142,7 @@
     
   
 <div id="content">
-    <section class="container sponsor-images" id="sponsors">
+    <section class="container supporter-images" id="supporters">
         <div class="row">
             <h2 class="highlight">Sponsored by</h2>
         </div>
@@ -442,15 +451,6 @@
             </div>
         </div>
     </section>
-    
-    <section class="solstice-banner alt text-center" id="save-the-date">
-        <div class="container">
-            <div class="row">
-                <h2>Save the date!</h2>
-                <p><a class="btn btn-secondary" href="https://osdforum.eventbrite.com/">Register Now!</a></p>
-            </div>
-        </div>
-    </section>
 </div>
 
   
@@ -459,6 +459,82 @@
   </div>
 </main>
   
+  <div class="featured-footer featured-alternate" id="featured-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-24">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var rawStoryJSON = "[{\"bgImgSrc\":\"/images/save-the-date.jpg\",\"endDate\":\"2099-08-25\",\"link\":\"\\u003ca class=\\\"btn btn-secondary\\\" href=\\\"https://osdforum.eventbrite.com/\\\"\\u003eRegister Now!\\u003c/a\\u003e\",\"startDate\":\"2019-08-25\",\"title\":\"Save the date!\",\"type\":\"footer\"}]";
+    var sort =  null ;
+    var json = JSON.parse(rawStoryJSON);
+    
+    json = json.filter(a => new Date(a['endDate']) > new Date())
+      .filter(a => a['type'] === "both" || a['type'] === "footer" );
+    
+    
+    if (json.length > 1) {
+      shuffleArray(json);
+    }
+    
+    
+    if (json.length > 0) {
+      var item = json[0];
+      var storyEl = document.querySelector("#featured-footer");
+      
+      if (item['bgImgSrc'] !== undefined && item['bgImgSrc'] !== "") {
+        storyEl.style.backgroundImage = 'url(\'' + item['bgImgSrc'] + '\')';
+        storyEl.style.backgroundSize = 'cover';
+      }
+  
+      
+      if (item['footer_classes'] !== undefined && item['footer_classes'] !== "") {
+        storyEl.className = item['footer_classes'];
+      }
+      
+      
+      var headingEl = document.createElement('h2');
+      headingEl.innerHTML =  item['title'];
+      
+      var linkEl = document.createElement('span');
+      linkEl.innerHTML =  item['link'];
+  
+      
+      var preambleEl, contentEl = null;
+      if (item['preamble'] != undefined && item['premble'] != "") {
+        preambleEl = document.createElement('p');
+        preambleEl.innerHTML =  item['preamble'];
+      }
+      if (item['content'] != undefined && item['content'] != "") {
+        contentEl = document.createElement('p');
+        contentEl.innerHTML =  item['content'];
+      }
+      
+      var divEl = storyEl.querySelector(".row > div");
+      if (preambleEl != undefined) {
+        divEl.appendChild(preambleEl);
+      }
+      divEl.appendChild(headingEl);
+      if (contentEl != undefined) {
+        divEl.appendChild(contentEl);
+      }
+      divEl.appendChild(linkEl);
+    }
+    
+
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+  </script>
+
   
   
 
