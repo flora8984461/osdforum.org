@@ -12,5 +12,14 @@
 	<atom:link href="https://www.osdforum.org/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>OSDForum</title>
+      <link>https://www.osdforum.org/2019/</link>
+      <pubDate>Sun, 14 Jul 2019 15:50:25 -0400</pubDate>
+      <author>info@openhwgroup.org (OpenHW Group)</author>
+      <guid>https://www.osdforum.org/2019/</guid>
+      <description>OSDForum 2019 Sponsored By                                        About OSDForum  RISC-V dev board attendees will keep  The Open Source Developer Forum is a workshop that brings open source SW and HW (chips, boards and systems) developers together to collaborate and learn.</description>
+    </item>
+    
   </channel>
 </rss>
